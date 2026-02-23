@@ -1,0 +1,232 @@
+/* ==========================================================================
+   Token Documentation Styles
+   Shared styles for all Sub Atomic / design-token documentation stories
+   ========================================================================== */
+
+/* ---- Shared layout ---- */
+
+.page {
+  max-width: 960px;
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-500);
+  margin: 0 0 32px;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+/* ---- Colour swatches ---- */
+
+.swatchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  border: 1px solid var(--color-gray-100);
+}
+
+.swatchColor {
+  height: 80px;
+  width: 100%;
+}
+
+.swatchInfo {
+  padding: 8px 10px;
+  background: var(--color-white);
+}
+
+.swatchName {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  margin: 0 0 2px;
+}
+
+.swatchValue {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  margin: 0;
+}
+
+.swatchToken {
+  font-size: 10px;
+  color: var(--color-blue-gray);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  margin: 2px 0 0;
+}
+
+/* ---- Typography samples ---- */
+
+.typeTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.typeTable th {
+  text-align: left;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-500);
+  padding: 8px 12px;
+  border-bottom: 2px solid var(--color-gray-100);
+}
+
+.typeTable td {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--color-gray-100);
+  vertical-align: middle;
+}
+
+.typeMeta {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+/* ---- Spacing scale ---- */
+
+.spaceRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.spaceLabel {
+  width: 64px;
+  flex-shrink: 0;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+}
+
+.spaceBar {
+  height: 24px;
+  background-color: var(--color-dark-blue);
+  border-radius: var(--radius-small);
+  transition: width 0.3s ease;
+}
+
+.spaceMeta {
+  flex-shrink: 0;
+  width: 120px;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  text-align: right;
+}
+
+/* ---- Radius ---- */
+
+.radiusGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+}
+
+.radiusCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--color-gray-100);
+  border-radius: var(--radius-medium);
+  background: var(--color-white);
+}
+
+.radiusSample {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-dark-blue);
+}
+
+.radiusLabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  text-align: center;
+}
+
+.radiusValue {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.radiusUsage {
+  font-size: var(--font-size-xs);
+  color: var(--color-blue-gray);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ---- Breakpoints ---- */
+
+.breakpointTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.breakpointTable th {
+  text-align: left;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-500);
+  padding: 10px 12px;
+  border-bottom: 2px solid var(--color-gray-100);
+}
+
+.breakpointTable td {
+  padding: 12px;
+  border-bottom: 1px solid var(--color-gray-100);
+  font-size: var(--font-size-sm);
+  vertical-align: middle;
+}
+
+.bpToken {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+.bpBar {
+  height: 8px;
+  background: var(--color-dark-blue);
+  border-radius: var(--radius-full);
+  opacity: 0.6;
+}
+
+.note {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  line-height: 1.6;
+  margin-top: 24px;
+  padding: 16px;
+  background: var(--color-gray-100);
+  border-radius: var(--radius-medium);
+}

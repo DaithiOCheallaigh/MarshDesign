@@ -1,0 +1,97 @@
+/* ==========================================================================
+   TextField — Marsh Design System
+   ========================================================================== */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-900);
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-500);
+  border-radius: var(--radius-medium);
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.input::placeholder {
+  color: var(--color-gray-500);
+}
+
+.input:hover:not(:disabled) {
+  border-color: var(--color-blue-gray);
+}
+
+.input:focus {
+  border-color: var(--color-dark-blue);
+  box-shadow: 0 0 0 2px var(--color-blue-tint);
+}
+
+.input:disabled {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-500);
+  cursor: not-allowed;
+}
+
+/* ---- Error state ---- */
+
+.error {
+  border-color: var(--color-danger);
+}
+
+.error:hover:not(:disabled) {
+  border-color: var(--color-danger);
+}
+
+.error:focus {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 2px var(--color-red-tint);
+}
+
+/* ---- Icon support ---- */
+
+.leadingIcon {
+  position: absolute;
+  left: var(--space-3);
+  display: flex;
+  align-items: center;
+  color: var(--color-gray-500);
+  pointer-events: none;
+}
+
+.withIcon {
+  padding-left: var(--space-8);
+}
+
+/* ---- Helper / Error text ---- */
+
+.helperText {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+.errorText {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+}

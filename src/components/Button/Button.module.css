@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Button — Marsh Design System
+   Variants: primary (dark blue pill), danger (red tint), outline
+   Sizes: small, medium, large
+   ========================================================================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  white-space: nowrap;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---- Variants ---- */
+
+.primary {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  border-radius: var(--radius-large);
+}
+
+.primary:hover:not(:disabled) {
+  background-color: #001e54;
+}
+
+.primary:active:not(:disabled) {
+  background-color: #001640;
+}
+
+.danger {
+  background-color: var(--color-red-tint);
+  color: var(--color-danger-dark);
+  border-color: var(--color-red-tint);
+  border-radius: var(--radius-medium);
+}
+
+.danger:hover:not(:disabled) {
+  background-color: var(--color-red-tint-hover);
+  border-color: var(--color-red-tint-hover);
+}
+
+.danger:active:not(:disabled) {
+  background-color: #ffb8b6;
+  border-color: #ffb8b6;
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--color-dark-blue);
+  border-color: var(--color-dark-blue);
+  border-radius: var(--radius-medium);
+}
+
+.outline:hover:not(:disabled) {
+  background-color: var(--color-gray-50);
+}
+
+.outline:active:not(:disabled) {
+  background-color: var(--color-blue-tint);
+}
+
+/* ---- Sizes ---- */
+
+.small {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.medium {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-base);
+}
+
+.large {
+  padding: var(--space-4) var(--space-10);
+  font-size: var(--font-size-lg);
+}
+
+/* ---- Inner elements ---- */
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.small .icon {
+  width: 14px;
+  height: 14px;
+}
+
+.medium .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.large .icon {
+  width: 20px;
+  height: 20px;
+}
