@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Tag — Marsh Design System
+   Removable chip/label: gray background, teal text, optional × button
+   ========================================================================== */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-4);
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-small);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-blue);
+  white-space: nowrap;
+}
+
+.disabled {
+  opacity: 0.4;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-blue);
+  line-height: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.remove:hover:not(:disabled) {
+  opacity: 0.7;
+}
+
+.remove:disabled {
+  cursor: not-allowed;
+}
